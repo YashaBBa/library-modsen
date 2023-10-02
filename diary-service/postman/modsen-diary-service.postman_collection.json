@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "af73e49c-01e2-4b67-9cb6-7783203f97c9",
+		"name": "modsen-diary-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20646976"
+	},
+	"item": [
+		{
+			"name": "Get All Available Books",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book Rent Data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"returnTheBookDate\": \"2023-10-02T00:16:49.984565\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/api/v1/diary/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"diary",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8083/api/v1/diary",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"diary"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
