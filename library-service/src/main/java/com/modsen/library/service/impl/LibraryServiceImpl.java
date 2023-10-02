@@ -8,6 +8,7 @@ import com.modsen.library.repository.BookRepository;
 import com.modsen.library.service.LibraryService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
@@ -21,7 +22,8 @@ public class LibraryServiceImpl implements LibraryService {
     private final BookRepository bookRepository;
     private final BookMapper bookMapper;
     private final KafkaSenderImpl kafkaSender;
-    private String topic = "library";
+    @Value("${spring.kafka.topic}")
+    private String topic;
 
     @Override
     public List<BookResponse> getAllBooks() {
