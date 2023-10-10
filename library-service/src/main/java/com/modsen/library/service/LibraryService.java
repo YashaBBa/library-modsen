@@ -1,12 +1,13 @@
 package com.modsen.library.service;
 
+import com.modsen.library.dto.Diary;
 import com.modsen.library.dto.request.BookRequest;
 import com.modsen.library.dto.response.BookResponse;
 
 import java.util.List;
 
 public interface LibraryService {
-    List<BookResponse> getAllBooks();
+    Diary getAllBooks();
 
     BookResponse getBookById(Long id);
 

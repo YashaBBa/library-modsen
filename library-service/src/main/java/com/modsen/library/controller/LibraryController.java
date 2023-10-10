@@ -1,5 +1,6 @@
 package com.modsen.library.controller;
 
+import com.modsen.library.dto.Diary;
 import com.modsen.library.dto.request.BookRequest;
 import com.modsen.library.dto.response.BookResponse;
 import com.modsen.library.service.LibraryService;
@@ -21,7 +22,7 @@ public class LibraryController {
 
 
     @GetMapping(produces = {"application/json"})
-    public List<BookResponse> getAllBooks() {
+    public Diary getAllBooks() {
         return libraryService.getAllBooks();
     }
 
